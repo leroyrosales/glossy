@@ -40,3 +40,12 @@ add_action( 'init', function() {
   register_post_type( "definition", $args );
   
 });
+
+function my_home_query( $query ) {
+	if ( $query->is_main_query() && !is_admin() ) {
+		$query->set( 'post_type', array( 'definition' ));
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
+	}
+}
+add_action( 'pre_get_posts', 'my_home_query' );

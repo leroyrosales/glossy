@@ -13,17 +13,21 @@
  * @since   Timber 0.1
  */
 
+global $paged;
+if (!isset($paged) || !$paged){
+	$paged = 1;
+}
+
 $context          = Timber::context();
 
-$definitions = array(
-	'post_type' => 'definition',
-	'orderby'=> 'title', 
-	'order' => 'ASC',
-	'posts_per_page' => 10,
-	'paged' => $paged,
-);
+// $definitions = array(
+// 	'post_type' => 'definition',
+// 	'orderby'=> 'title', 
+// 	'order' => 'ASC',
+// 	'paged' => $paged,
+// );
 
-$context['posts'] = new Timber\PostQuery( $definitions );
+$context['posts'] = new Timber\PostQuery( );
 
 $templates        = array( 'index.twig' );
 if ( is_home() ) {
