@@ -22,3 +22,7 @@ a {
 a:hover {
   color: var(--primary-darker);
 }
+
+.btn {
+  font-size: inherit;
+}

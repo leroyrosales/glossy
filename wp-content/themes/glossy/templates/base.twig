@@ -27,17 +27,19 @@
 		</header>
 
 		<main id="content" role="main" class="content-wrapper container">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
+			<section class="row justify-content-center">
+				{% if title %}<h1>{{title}}</h1>{% endif %}
+					<div class="wrapper col-12 col-md-9 {{sidebar_class}}">
+						{% block content %}
+							Sorry, no content
+						{% endblock %}
+					</div>
+				{% if sidebar %}
+					<aside class="layout-sidebar">
+						{{sidebar}}
+					</aside>
+				{% endif %}
+			</section>
 		</main>
 
 		{% block footer %}

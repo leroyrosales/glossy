@@ -8,6 +8,7 @@
 
 // TODO: Disable posts related feeds and pings?
 
+add_filter( 'use_block_editor_for_post', '__return_false' );
 
 // Remove posts page in menu
 add_action( 'admin_menu', function() {

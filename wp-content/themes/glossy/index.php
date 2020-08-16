@@ -14,8 +14,17 @@
  */
 
 $context          = Timber::context();
-$context['posts'] = new Timber\PostQuery();
-$context['foo']   = 'bar';
+
+$definitions = array(
+	'post_type' => 'definition',
+	'orderby'=> 'title', 
+	'order' => 'ASC',
+	'posts_per_page' => 10,
+	'paged' => $paged,
+);
+
+$context['posts'] = new Timber\PostQuery( $definitions );
+
 $templates        = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
