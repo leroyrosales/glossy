@@ -4,3 +4,11 @@
  * Author: Leroy Rosales
  * Author URI: https://leroyrosales.com/
 */
+
+:root {
+  --primary: #2e8555;
+}
+
+.bg-primary {
+  background-color: var(--primary)!important;
+}
