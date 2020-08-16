@@ -7,8 +7,18 @@
 
 :root {
   --primary: #2e8555;
+  --primary-dark: #1f5738;
 }
 
 .bg-primary {
   background-color: var(--primary)!important;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--primary-darker);
 }
