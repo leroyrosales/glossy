@@ -1,0 +1,4 @@
+name: glossary
+recipe: wordpress
+config:
+  webroot: .
