@@ -8,21 +8,42 @@
 :root {
   --primary: #2e8555;
   --primary-dark: #1f5738;
+  --primary-darker: #205c3b;
 }
 
 .bg-primary {
   background-color: var(--primary)!important;
 }
 
-a {
+a,
+.page-link {
   color: var(--primary);
   text-decoration: underline;
 }
 
-a:hover {
+a:hover,
+.page-link:hover {
   color: var(--primary-darker);
 }
 
 .btn {
   font-size: inherit;
+}
+
+.search--field {
+  background-color: var(--primary-dark);
+  color: #fff;
+  border: none;
+  padding: .25rem;
+}
+
+.search--btn {
+  background-color: var(--primary-dark);
+  color: #fff;
+  padding: .25rem 1.5rem;
+  border: 1px solid #fff;
+}
+
+.search--btn:hover {
+  background-color: var(--primary-darker);
 }

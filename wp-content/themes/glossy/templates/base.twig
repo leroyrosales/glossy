@@ -10,14 +10,14 @@
 		<header class="header bg-primary">
 			{% block header %}
 				<div class="wrapper container">
-					<div class="row mb-4 py-2 d-flex align-items-center">
+					<div class="row mb-5 py-2 d-flex align-items-center">
 						<div class="col-3">
 							<h1 class="hdr-logo text-white" role="banner">
 								{{site.name}}
 							</h1>
 						</div>
 						<div class="col">
-							<nav id="nav-main" class="nav-main" role="navigation">
+							<nav id="nav-main" class="navbar navbar-expand" role="navigation">
 								{% include "menu.twig" with {'items': menu.get_items} %}
 							</nav><!-- #nav -->
 						</div>
@@ -28,7 +28,7 @@
 
 		<main id="content" role="main" class="content-wrapper container">
 			<section class="row justify-content-center">
-				{% if title %}<h1>{{title}}</h1>{% endif %}
+				{% if title %}<h1 class="my-3 py-3">{{title}}</h1>{% endif %}
 					<div class="wrapper col-12 col-md-9 {{sidebar_class}}">
 						{% block content %}
 							Sorry, no content

@@ -42,10 +42,16 @@ add_action( 'init', function() {
 });
 
 function my_home_query( $query ) {
+
+	if( is_page() ) {
+		return;
+	}
+
 	if ( $query->is_main_query() && !is_admin() ) {
 		$query->set( 'post_type', array( 'definition' ));
 		$query->set( 'orderby', 'title' );
 		$query->set( 'order', 'ASC' );
 	}
+	
 }
 add_action( 'pre_get_posts', 'my_home_query' );

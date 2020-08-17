@@ -2,9 +2,13 @@
 	<ul class="navbar-nav mr-auto">
 	{% for item in items %}
 		<li class="nav-item {{ item.classes | join(' ') }}">
-			<a class="text-white" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'items': item.children} %}
+			<a class="text-white nav-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+			{% if item.children %}
+				{% include "menu.twig" with {'items': item.children} %}
+			{% endif %}
 		</li>
 	{% endfor %}
 	</ul>
+
+	{% include 'searchform.twig' %}
 {% endif %}

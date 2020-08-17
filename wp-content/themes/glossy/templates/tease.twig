@@ -3,9 +3,7 @@
 		<div class="card">
 			<div class="card-header rounded-0 bg-secondary" id="heading{{ post.title }}">
 				<h3 class="h4 mb-0">
-					<button class="btn btn-link stretched-link text-white" data-toggle="collapse" data-target="#collapse{{ post.id }}" aria-expanded="false" aria-controls="collapse{{ post.id }}">
-						{{post.title}}
-					</button>
+					<button class="btn btn-link stretched-link text-white" data-toggle="collapse" data-target="#collapse{{ post.id }}" aria-expanded="false" aria-controls="collapse{{ post.id }}">{{post.title}}</button>
 				</h3>
 			</div>
 			<div id="collapse{{ post.id }}" class="collapse" aria-labelledby="heading{{ post.title }}" data-parent="#accordion">
